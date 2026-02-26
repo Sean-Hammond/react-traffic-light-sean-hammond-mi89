@@ -11,19 +11,33 @@
 */
 
 #container {
-  background-color: black;
-  width: 80px;
-  border-radius: 5%;
-  margin: 15px;
+  display: flex;
+  justify-content: center;
 }
 
-.trafficLight {
-  height: 75px;
-  width: 75px;
+/* .traffic-light-pole {
+    background-color: black;
+    height: 10rem;
+    width: 1rem;
+    margin-bottom: -2rem;
+} */
+
+.traffic-light-container {
+  background-color: black;
+  width: 8rem;
+  height: 20rem;
+  border-radius: 5%;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.traffic-light {
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
   display: inline-block;
 }
 
 .lightGlow {
-  box-shadow: 0 0 10px 10px cornsilk;
+  box-shadow: 0 0 1rem 1rem cornsilk;
 }
