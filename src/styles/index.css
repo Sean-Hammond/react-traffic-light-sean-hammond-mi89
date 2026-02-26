@@ -9,3 +9,21 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+#container {
+  background-color: black;
+  width: 80px;
+  border-radius: 5%;
+  margin: 15px;
+}
+
+.trafficLight {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.lightGlow {
+  box-shadow: 0 0 10px 10px cornsilk;
+}
