@@ -7,7 +7,7 @@ const Home = () => {
     <div id="container">
       <div
         className={
-          "trafficLight text-center" +
+          "trafficLight text-center " +
           (color === "red"
             ? "lightGlow bg-danger border border-5 border-danger"
             : "bg-danger-subtle border-0")
@@ -20,7 +20,7 @@ const Home = () => {
       <br />
       <div
         className={
-          "trafficLight text-center" +
+          "trafficLight text-center " +
           (color === "yellow"
             ? "lightGlow bg-warning border border-5 border-warning"
             : "bg-warning-subtle border-0")
@@ -33,7 +33,7 @@ const Home = () => {
       <br />
       <div
         className={
-          "trafficLight text-center" +
+          "trafficLight text-center " +
           (color === "green"
             ? "lightGlow bg-success border border-5 border-success"
             : "bg-success-subtle border-0")
