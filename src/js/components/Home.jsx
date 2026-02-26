@@ -1,28 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-            
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+const [red, setRed] = useState("on")
+const [yellow, setYellow] = useState("off")
+const [green, setGreen] = useState("off")
+
+const glowRed = ()=>{
+	setRed("on");
+	setYellow("off");
+	setGreen("off");
+}
+const glowYellow = ()=>{
+	setYellow("on");
+	setRed("off");
+	setGreen("off");
+}
+const glowGreen = ()=>{
+	setGreen("on");
+	setYellow("off");
+	setRed("off");
+}
+
+return (
+		<div id="container">
+			<div className={`trafficLight text-center ${red == "on" ? "lightGlow bg-danger border border-5 border-danger" : "bg-danger-subtle border-0" }`} onClick={glowRed} > R </div><br />
+			<div className={`trafficLight text-center ${yellow == "on" ? "lightGlow bg-warning border border-5 border-warning" : "bg-warning-subtle border-0" }`} onClick={glowYellow} > Y </div><br />
+			<div className={`trafficLight text-center ${green == "on" ? "lightGlow bg-success border border-5 border-success" : "bg-success-subtle border-0" }`} onClick={glowGreen} > G </div>
 		</div>
 	);
 };
 
 export default Home;
+
+//I suspect the grader will suggest a simpler way like this:
+/*
+const [red, setRed] = useState("true")
+const [yellow, setYellow] = useState("false")
+const [green, setGreen] = useState("false")
+
+const onlyOneFunctionNotThree = ()=>{
+	setRed(!red);
+	setYellow(!yellow);
+	setGreen(!green);
+	}
+*/
+//Yes, I tried that, but it did not work as expected.
