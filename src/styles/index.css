@@ -31,6 +31,13 @@
   padding: 1rem;
 }
 
+.traffic-light-pole {
+  background-color: black;
+  color: black;
+  height: 2rem;
+  position: absolute;
+}
+
 .traffic-light {
   height: 6rem;
   width: 6rem;

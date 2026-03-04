@@ -5,8 +5,8 @@ const Home = () => {
 
   return (
     <div id="container">
-      {/* <div className="traffic-light-pole"> </div> */}
-	  <div className="traffic-light-container">
+      <span className="traffic-light-pole">Pole</span>
+      <div className="traffic-light-container">
         <div
           className={
             "traffic-light text-center " +
